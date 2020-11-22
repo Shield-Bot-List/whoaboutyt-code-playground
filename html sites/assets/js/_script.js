@@ -22,12 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-const { Client } = require('discord.js');
-const ClientBase = require(/* our client base */ './structures/Client');
+function game_start(username) {
+    document.getElementById('uid').innerHTML = username;
+}
 
-
-
-const client = new ClientBase()
-
-
-client.start(config.token, 'commands', 'events');
+game_start()
