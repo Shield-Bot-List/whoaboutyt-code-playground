@@ -4,7 +4,6 @@ about: Create a report so we can fix it or help you!
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 # Bug 
