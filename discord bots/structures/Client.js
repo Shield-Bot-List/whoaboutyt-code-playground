@@ -22,52 +22,54 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-const { default: Collection } = require('@discordjs/collection');
-const Discord = require('discord.js');
+const { default: Collection } = require("@discordjs/collection");
+const Discord = require("discord.js");
 class CustomClient extends Discord.Client {
-    constructor() {
-        super({
-            disableMentions: `everyone`
-        })
-        this.commands = new Discord.Collection();
-        this.path = require('path');
-        this.events = new Collection();
-        this.fs = require('fs');
-        this.discord = require('discord.js');
-    }
+  constructor() {
+    super({
+      disableMentions: `everyone`,
+    });
+    this.commands = new Discord.Collection();
+    this.path = require("path");
+    this.events = new Collection();
+    this.fs = require("fs");
+    this.discord = require("discord.js");
+  }
 
-    eventHandler(eventPath) {
-        this.fs.readdirSync(this.path.normalize(eventPath)).map((f) => {
-            const File = require(this.path.join(__dirname, `..`, eventPath, f));
-            this.on(File.name, file.run.bind(null, this));
-            this.events.set(File.name, File);
-        })
-    }
+  eventHandler(eventPath) {
+    this.fs.readdirSync(this.path.normalize(eventPath)).map((f) => {
+      const File = require(this.path.join(__dirname, `..`, eventPath, f));
+      this.on(File.name, file.run.bind(null, this));
+      this.events.set(File.name, File);
+    });
+  }
 
-    commandHandler(commandsFolderPath) {
-        this.fs.readdirSync(this.path.normalize(commandsFolderPath)).map((data) => {
-            const File = require(this.path.join(__dirname, `..`, commandsFolderPath, data));
+  commandHandler(commandsFolderPath) {
+    this.fs.readdirSync(this.path.normalize(commandsFolderPath)).map((data) => {
+      const File = require(this.path.join(
+        __dirname,
+        `..`,
+        commandsFolderPath,
+        data
+      ));
 
-            this.commands.set(File.name, File);
+      this.commands.set(File.name, File);
 
-            console.log("Loaded command " + File.name);
-        })
-    }
-    
+      console.log("Loaded command " + File.name);
+    });
+  }
 
-    start(token,commandFolder,eventFolder) {
-        this.login(token).catch(err => console.log(err));
+  start(token, commandFolder, eventFolder) {
+    this.login(token).catch((err) => console.log(err));
 
-        this.commandHandler(commandFolder);
+    this.commandHandler(commandFolder);
 
-        this.eventHandler(eventFolder);
+    this.eventHandler(eventFolder);
 
-        console.log("I finished all my processes to start the bot.");
-    }
+    console.log("I finished all my processes to start the bot.");
+  }
 }
 
 module.exports = CustomClient;
 
-new CustomClient().commandHandler(
-    'commands'
-);
+new CustomClient().commandHandler("commands");

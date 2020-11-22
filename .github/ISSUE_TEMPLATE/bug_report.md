@@ -1,21 +1,20 @@
 ---
 name: Bug report
 about: Create a report so we can fix it or help you!
-title: ''
-labels: ''
-assignees: ''
-
+title: ""
+labels: ""
+assignees: ""
 ---
 
-# Bug 
+# Bug
 
 ### Error(s):
 
-***Post your error right here.***
+**_Post your error right here._**
 
 ### How you got to this error?
 
-*** Post how you got the error ***
+**_ Post how you got the error _**
 
 (Optional)
 
