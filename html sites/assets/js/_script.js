@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 function game_start(username) {
-    document.getElementById('uid').innerHTML = username;
+  document.getElementById("uid").innerHTML = username;
 }
 
-game_start()
+game_start();

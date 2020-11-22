@@ -22,12 +22,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-const { Client } = require('discord.js');
-const ClientBase = require(/* our client base */ './structures/Client');
+const { Client } = require("discord.js");
+const ClientBase = require(/* our client base */ "./structures/Client");
 
+const client = new ClientBase();
 
-
-const client = new ClientBase()
-
-
-client.start(config.token, 'commands', 'events');
+client.start(config.token, "commands", "events");
