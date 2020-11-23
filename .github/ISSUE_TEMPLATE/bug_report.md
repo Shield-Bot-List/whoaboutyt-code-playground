@@ -1,28 +1,38 @@
 ---
 name: Bug report
-about: Create a report so we can fix it or help you!
-<<<<<<< HEAD
+about: Create a report to help us improve
 title: ''
 labels: ''
 assignees: ''
-=======
-title: ""
-labels: ""
-assignees: ""
->>>>>>> 0eb2df3a1f9b7294a26ce7a7b2a2168d75aba7f6
+
 ---
 
-# Bug
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-### Error(s):
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-**_Post your error right here._**
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-### How you got to this error?
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
 
-**_ Post how you got the error _**
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Browser [e.g. chrome, safari]
+ - Version [e.g. 22]
 
-(Optional)
+**Smartphone (please complete the following information):**
+ - Device: [e.g. iPhone6]
+ - OS: [e.g. iOS8.1]
+ - Browser [e.g. stock browser, safari]
+ - Version [e.g. 22]
 
-Regards,
-Your name
+**Additional context**
+Add any other context about the problem here.
